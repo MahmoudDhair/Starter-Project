@@ -78,10 +78,13 @@ use Illuminate\Support\Facades\Route;
 //   return view('landing');
 //});
 
-Auth::routes(['verify'=>true]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/',function (){
    return 'Home Page' ;
 });
+
+//Route::get('/redirect/{service}','SocialController@redirectToProvider')->name('loginFB');
+//Route::get('/login/{service}/callback','SocialController@handleProviderCallback');
