@@ -11,8 +11,10 @@
 |
 */
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //Route::get('/', function () {
 //   // How To Pass Data To View
@@ -86,5 +88,27 @@ Route::get('/',function (){
    return 'Home Page' ;
 });
 
-//Route::get('/redirect/{service}','SocialController@redirectToProvider')->name('loginFB');
-//Route::get('/login/{service}/callback','SocialController@handleProviderCallback');
+Route::get('/redirect/{service}','SocialController@redirectToProvider')->name('loginFB');
+Route::get('/login/{service}/callback','SocialController@handleProviderCallback');
+
+Route::get('fallible','CrudController@getOffer');
+
+Route::group(['prefix'=>LaravelLocalization::setLocale(),'middleware'=>['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']],function (){
+    Route::group(['prefix'=>'offer'],function (){
+        //Route::get('store','CrudController@store');
+        Route::get('create','CrudController@create');
+        Route::post('store','CrudController@store')->name('offer.store');
+        Route::get('edit/{offer_id}','CrudController@edit');
+        Route::post('update/{offer_id}','CrudController@update')->name('offer.update');
+        Route::get('delete/{offer_id}','CrudController@delete')->name('offer.delete');
+        Route::get('all','CrudController@getAllOffer')->name('offer.all');
+    });
+
+    Route::get('youtube','CrudController@getVideo')->middleware('auth');
+});
+
+Route::get('test',function (){
+    $offer = \App\Models\Offer::get();
+    return $offer;
+});
+

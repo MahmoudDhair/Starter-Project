@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="67b517e6-73b3-4af4-9971-02339a0f6edc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Notify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/expiration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Events/ViewViewer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/OfferRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/IncreaceViewer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/NotifyEmail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Traits/OfferTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laravellocalization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1600157378.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1600158355.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/offers/1600158708.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/emails/user_mail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/offers/all.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/offers/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/offers/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/videos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/starter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/massages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/massages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/massages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/massages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,31 +167,38 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hB7VQOe7f0fIvkXlPChZnafJvz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../social" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\starter\app\Http\Controllers\Front" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\starter\resources\views\PortfolioModals" />
-      <recent name="C:\wamp64\www\starter\resources\views\includes" />
-      <recent name="C:\wamp64\www\starter\resources\views\layouts" />
-      <recent name="C:\wamp64\www\starter\resources\lang\ar" />
-      <recent name="C:\wamp64\www\starter\resources\lang\en" />
+      <recent name="C:\wamp64\www\starter\resources\views" />
+      <recent name="C:\wamp64\www\starter\resources\views\offers" />
+      <recent name="C:\wamp64\www\starter\app\Http\Controllers" />
+      <recent name="C:\wamp64\www\starter\app\Http\Controllers\Front" />
+      <recent name="C:\wamp64\www\starter\resources\views\emails" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\starter\app\Models" />
+      <recent name="C:\wamp64\www\starter\app\Http\Controllers\Front" />
     </key>
   </component>
   <component name="RunManager">
@@ -177,25 +220,56 @@
       <workItem from="1599638280665" duration="13950000" />
       <workItem from="1599682424122" duration="5214000" />
       <workItem from="1599721398623" duration="127000" />
-      <workItem from="1599728124291" duration="7593000" />
+      <workItem from="1599728124291" duration="8193000" />
+      <workItem from="1599896118936" duration="4577000" />
+      <workItem from="1599901372315" duration="4504000" />
+      <workItem from="1599910832129" duration="2340000" />
+      <workItem from="1599986156998" duration="3635000" />
+      <workItem from="1600064242589" duration="12754000" />
+      <workItem from="1600151683774" duration="5724000" />
+      <workItem from="1600184695143" duration="999000" />
+      <workItem from="1600240170475" duration="3706000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599552617120">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600158569918">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599552617120" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600158569918" />
+    <state x="440" y="175" width="689" height="499" key="EnvironmentVariablesDialog" timestamp="1599900311046">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="440" y="175" width="689" height="499" key="EnvironmentVariablesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599900311046" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599760959726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599760959726" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1599683451987">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1600158443747">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599683451987" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1600158443747" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1599901982635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599901982635" />
   </component>
 </project>
