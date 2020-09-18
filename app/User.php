@@ -36,5 +36,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    #################### Start Relation #########################
+    public function phone(){
+        return $this->hasOne('App\Models\Phone','user_id');
+    }
+    #################### End Relation ###########################
 
 }

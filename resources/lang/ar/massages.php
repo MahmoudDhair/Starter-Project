@@ -41,6 +41,8 @@ return [
     'Choose Photo'=>'اختر صورة العرض',
     'Delete' =>'حذف',
     'The Offer Deleted Successfully' => 'تم حذف العرض بنجاح',
-    'Offer Image' => 'صورة العرض'
+    'Offer Image' => 'صورة العرض',
+    'Delete ajax' => 'حذف اجاكس',
+    'update Ajax' => 'تعديل اجاكس',
 
 ];

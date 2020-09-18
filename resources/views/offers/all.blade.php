@@ -54,8 +54,10 @@
             <td>{{$offer -> pric}}</td>
             <td>{{$offer -> details}}</td>
             <td><img src="{{asset('images/offers/'.$offer -> photo)}}" class="img-thumbnail" width="100" height="100"></td>
-            <td><a href="{{url('offer/edit/'.$offer -> id)}}" class="btn btn-success btn-sm">{{__('massages.update')}}</a></td>
-            <td><a href="{{route('offer.delete',$offer -> id)}}" class="btn btn-danger btn-sm">{{__('massages.Delete')}}</a></td>
+            <td>
+                <a href="{{url('offer/edit/'.$offer -> id)}}" class="btn btn-success btn-sm">{{__('massages.update')}}</a>
+                <a href="{{route('offer.delete',$offer -> id)}}" class="btn btn-danger btn-sm">{{__('massages.Delete')}}</a>
+            </td>
         </tr>
         @endforeach
 

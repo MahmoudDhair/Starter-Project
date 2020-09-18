@@ -26,11 +26,18 @@ class IncreaceViewer
      */
     public function handle(ViewViewer $event)
     {
-        $this ->updateViewer($event -> video);
+        if(!session()->has('VideoIsVisited')){
+            $this ->updateViewer($event -> video);
+        }else{
+            return false;
+        }
+
     }
 
     public function updateViewer($video){
         $video -> viewer = $video -> viewer + 1;
         $video -> save();
+
+        session()->put('VideoIsVisited',$video->id);
     }
 }

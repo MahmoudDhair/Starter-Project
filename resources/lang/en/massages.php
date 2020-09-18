@@ -41,6 +41,8 @@ return [
     'Choose Photo'=>'Choose Offer Photo',
     'Delete' => 'Delete',
     'The Offer Deleted Successfully'=>'The Offer Deleted Successfully',
-    'Offer Image'=>'Offer Image'
+    'Offer Image'=>'Offer Image',
+    'Delete ajax'=>'Delete Ajax',
+    'Update Ajax'=> 'Update Ajax'
 
 ];

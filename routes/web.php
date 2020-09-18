@@ -112,3 +112,31 @@ Route::get('test',function (){
     return $offer;
 });
 
+Route::group(['prefix'=>'ajax-offer'],function (){
+    Route::get('create','OfferController@create')->name('ajax.offer.create');
+    Route::post('store','OfferController@store')->name('ajax.offer.store');
+    Route::get('all','OfferController@all')->name('ajax.offer.all');
+    Route::post('delete','OfferController@delete')->name('ajax.offer.delete');
+    Route::get('edit/{offer_id}','OfferController@edit')->name('ajax.offer.edit');
+    Route::post('update','OfferController@update')->name('ajax.offer.update');
+});
+
+Route::group(['namespace'=>'Auth','middleware'=>['checkAge','auth']],function (){
+    Route::get('adult','customAuthController@adult')->name('adult');
+
+});
+
+Route::get('site','Auth\customAuthController@site')->name('site')->middleware('auth:web');
+Route::get('admin','Auth\customAuthController@admin')->name('admin')->middleware('auth:admin');
+Route::get('admin/login','Auth\customAuthController@adminLogin')->name('adminLogin');
+Route::post('admin/login','Auth\customAuthController@CheckAdminLogin')->name('CheckAdminLogin');
+
+Route::get('test',function (){
+   return 'You are not allowed to visit route';
+})->name('test');
+
+
+#################### Start Relation #########################
+Route::get('has-one','Relation\RelationController@getHasOne');
+#################### End Relation ###########################
+
