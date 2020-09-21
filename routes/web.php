@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
+
+define('PAGINATION_COUNT',3);
 //Route::get('/', function () {
 //   // How To Pass Data To View
 //    //1- ->with('data',50);
@@ -102,6 +104,7 @@ Route::group(['prefix'=>LaravelLocalization::setLocale(),'middleware'=>['localeS
         Route::post('update/{offer_id}','CrudController@update')->name('offer.update');
         Route::get('delete/{offer_id}','CrudController@delete')->name('offer.delete');
         Route::get('all','CrudController@getAllOffer')->name('offer.all');
+        Route::get('get-active-offer-all','CrudController@getAllActiveOffer')->name('offer.all');
     });
 
     Route::get('youtube','CrudController@getVideo')->middleware('auth');
@@ -138,5 +141,53 @@ Route::get('test',function (){
 
 #################### Start Relation #########################
 Route::get('has-one','Relation\RelationController@getHasOne');
+Route::get('has-one-reverse','Relation\RelationController@getHasOneReverse');
+Route::get('get-all-user-has-phone','Relation\RelationController@getAllUserHasPhone');
+Route::get('get-all-user-not-has-phone','Relation\RelationController@getAllUserNotHasPhone');
+
+################# Start One To Many Relation ######################
+
+Route::get('get-hospital-doctors','Relation\RelationController@getHospitalDoctors');
+
+Route::get('hospitals','Relation\RelationController@getAllHospitals')->name('hospitals');
+
+Route::get('doctors/{hospital_id}','Relation\RelationController@getDoctonInHospital')->name('hospital.doctors');
+Route::get('hospital/{hospital_id}','Relation\RelationController@hospitalDelete')->name('hospital.delete');
+
+Route::post('doctors/delete','Relation\RelationController@doctorDelete')->name('doctor.delete');
+
+Route::get('hospitals-has-doctors','Relation\RelationController@hospitalsHasDoctors');
+Route::get('hospitals-has-doctors-with-male','Relation\RelationController@hospitalsHasDoctorsWithMale');
+Route::get('hospitals-not-has-doctors','Relation\RelationController@hospitalsNotHasDoctors');
+
+################# End One To Many Relation ######################
+
+################# Start Many To Many Relation ######################
+
+Route::get('doctor-serves','Relation\RelationController@getDoctorServes');
+Route::get('serves-doctor','Relation\RelationController@getServesDoctor');
+
+Route::get('doctors/serves/{doctor_id}','Relation\RelationController@getDoctonServesById')->name('doctors.serve');
+Route::post('serves-to-doctor','Relation\RelationController@getServesToDoctor')->name('serve.store');
+
+
+################# End Many To Many Relation ######################
+
+####################### Has One Through #####################
+Route::get('has-one-through','Relation\RelationController@getPatientDoctor');
+Route::get('has-many-through','Relation\RelationController@getCountryDoctor');
+
+
+####################### Has One Through #####################
+
 #################### End Relation ###########################
+
+
+########################## accessors And mutator ######################
+Route::get('accessors','Relation\RelationController@accessors');
+
+
+
+####################################collection ##############################3
+Route::get('test10','Relation\RelationController@index');
 

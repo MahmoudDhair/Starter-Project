@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Scopes\OfferScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Offer extends Model
@@ -13,5 +14,24 @@ class Offer extends Model
     // all column that Not Appear in the response
     protected $hidden = ['created_at' , 'updated_at'];
 
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new OfferScope());
+    }
+
     //public $timestamps = true; // to turn of timestamps
+
+    ######################################## local scopes ####################################################
+
+    public function scopeValid($q){
+        $q->where('status',1);
+    }
+
+
+    ######################################## local scopes ####################################################
+
+
+
 }

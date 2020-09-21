@@ -23,48 +23,36 @@
                             <div class="form-group">
                                 <label for="name_ar">{{__('massages.Choose Photo')}}</label>
                                 <input type="file" class="form-control" id="photo"   name="photo">
-                                @error('photo')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="photo_error" class="form-text text-danger"></small>
                             </div>
 
                             <div class="form-group">
                                 <label for="name_ar">{{__('massages.Offer Name ar')}}</label>
                                 <input type="text" class="form-control" id="name_ar" value="{{old('name_ar')}}"  name="name_ar" placeholder="{{__('massages.Offer Name ar')}}">
-                                @error('name_ar')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="name_ar_error" class="form-text text-danger"></small>
                             </div>
 
                             <div class="form-group">
                                 <label for="name_en">{{__('massages.Offer Name en')}}</label>
                                 <input type="text" class="form-control" id="name_en" value="{{old('name_en')}}"  name="name_en" placeholder="{{__('massages.Offer Name en')}}">
-                                @error('name_en')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="name_en_error" class="form-text text-danger"></small>
                             </div>
 
                             <div class="form-group">
                                 <label for="pric">{{__('massages.Offer Price')}}</label>
                                 <input type="text" class="form-control" id="pric" value="{{old('pric')}}" name="pric" placeholder="{{__('massages.Offer Price')}}">
-                                @error('pric')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="pric_error" class="form-text text-danger"></small>
                             </div>
                             <div class="form-group">
                                 <label for="details_ar">{{__('massages.Offer Details ar')}}</label>
                                 <input type="text" class="form-control" id="details_ar" value="{{old('details_ar')}}" name="details_ar" placeholder="{{__('massages.Offer Details ar')}}">
-                                @error('details_ar')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="details_ar_error" class="form-text text-danger"></small>
                             </div>
 
                             <div class="form-group">
                                 <label for="details_en">{{__('massages.Offer Details en')}}</label>
                                 <input type="text" class="form-control" id="details_en" value="{{old('details_en')}}" name="details_en" placeholder="{{__('massages.Offer Details en')}}">
-                                @error('details_en')
-                                <small class="form-text text-danger">{{$message}}</small>
-                                @enderror
+                                <small id="details_en_error" class="form-text text-danger"></small>
                             </div>
                             <button id="save_offer" class="btn btn-primary">{{__('massages.Offer Submit')}}</button>
                         </form>
@@ -80,6 +68,11 @@
         $(document).on('click','#save_offer',function (e){
             // save_offer is the id of button
             e.preventDefault();
+            $('#name_ar_error').text('');
+            $('#name_en_error').text('');
+            $('#pric_error').text('');
+            $('#details_ar_error').text('');
+            $('#details_en_error').text('');
             //data-offer is the id of form
             var formData = new FormData($('#data-offer')[0]);
             $.ajax({
@@ -92,12 +85,15 @@
                 cache: false,
                 success: function (data) {
                     if(data.status === true){
-                        $('#success_msg').show();
+                        $('#success_msg').text(data.msg);
                     }else {
                         alert(data.msg);
                     }
                 }, error: function (reject) {
-
+                    var response = $.parseJSON(reject.responseText);
+                    $.each(response.errors,function (key,val){
+                        $('#' + key + '_error').text(val);
+                    })
                 }
             });
         });

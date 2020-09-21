@@ -20,38 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67b517e6-73b3-4af4-9971-02339a0f6edc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/customAuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Relation/RelationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/checkAge.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Phone.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/folder/1600266281.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1600266357.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1600266612.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1600266752.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1600266956.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/offers/1600267006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/all.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/adminLogin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/customAuth/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Hospital.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Medical.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Patient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Serve.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Scopes/OfferScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/doctors/doctors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/doctors/hospitals.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/doctors/serves.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/offers/pagination.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/IncreaceViewer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/IncreaceViewer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/offers/1600157378.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/offers/1600158355.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/offers/1600158708.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/massages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/massages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/massages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/massages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/offers/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Relation/RelationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Relation/RelationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ajaxOffers/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,23 +167,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Scopes" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\starter\resources\views\auth" />
-      <recent name="C:\wamp64\www\starter\app\Models" />
-      <recent name="C:\wamp64\www\starter\resources\views" />
-      <recent name="C:\wamp64\www\starter\resources\views\customAuth" />
-      <recent name="C:\wamp64\www\starter\resources\views\offers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\starter\app\Http\Controllers\Auth" />
       <recent name="C:\wamp64\www\starter\app\Models" />
       <recent name="C:\wamp64\www\starter\app\Http\Controllers\Front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\starter\app\Scopes" />
+      <recent name="C:\wamp64\www\starter\resources\views\offers" />
+      <recent name="C:\wamp64\www\starter\resources\views\doctors" />
+      <recent name="C:\wamp64\www\starter\resources\views\auth" />
+      <recent name="C:\wamp64\www\starter\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -234,6 +219,10 @@
       <workItem from="1600324069274" duration="9309000" />
       <workItem from="1600342559354" duration="64000" />
       <workItem from="1600354304686" duration="1625000" />
+      <workItem from="1600439413551" duration="10455000" />
+      <workItem from="1600526659398" duration="7602000" />
+      <workItem from="1600584591238" duration="126000" />
+      <workItem from="1600690446503" duration="6849000" />
     </task>
     <servers />
   </component>
@@ -256,6 +245,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="488" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1600702300682">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="46" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1600702300682" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600276787957">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -276,5 +269,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599901982635" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1600707366909">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600707366909" />
   </component>
 </project>

@@ -84,8 +84,23 @@ class CrudController extends Controller
 
 
     public function getAllOffer(){
-       $offers = Offer::select('id','pric','name_'.LaravelLocalization::getCurrentLocale().' as name','details_'.LaravelLocalization::getCurrentLocale().' as details','photo') -> get();
-        return view('offers.all',compact('offers'));
+//       $offers = Offer::select
+//       ('id',
+//           'pric',
+//           'name_'.LaravelLocalization::getCurrentLocale().' as name',
+//           'details_'.LaravelLocalization::getCurrentLocale().' as details',
+//           'photo')
+//           -> get();
+        $offers = Offer::select
+        ('id',
+            'pric',
+            'name_'.LaravelLocalization::getCurrentLocale().' as name',
+            'details_'.LaravelLocalization::getCurrentLocale().' as details',
+            'photo')
+            -> paginate(PAGINATION_COUNT);
+        //return view('offers.all',compact('offers'));
+
+        return view('offers.pagination',compact('offers'));
     }
 
     public function edit($offer_id){
@@ -135,6 +150,11 @@ class CrudController extends Controller
         $video = Video::first();
         event(new ViewViewer($video));
         return view('videos')->with('video',$video);
+    }
+
+
+    public function getAllActiveOffer(){
+       return Offer::valid()->get();
     }
 
 
